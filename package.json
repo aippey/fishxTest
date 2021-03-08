@@ -1,0 +1,90 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "fishx dev --port=7534",
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=2048 fishx build",
+    "test": "fishx test",
+    "lint": "fishx lint --eslint src/",
+    "prettier": "fishx lint --prettier src/",
+    "fix": "fishx lint --fix src/",
+    "analyze": "cross-env ANALYZE=true fishx dev --port=7534"
+  },
+  "description": "基于Fishx V2.0的基础模板",
+  "husky": {
+    "hooks": {
+      "pre-commit": "fishx lint --eslint --staged"
+    }
+  },
+  "homepage": ".",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "ie 9-11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "ie 9-11"
+    ]
+  },
+  "dependencies": {
+    "@fishx/cli": "4.0.41",
+    "@fishx/core": "2.0.0-beta8",
+    "@fishx/dva": "0.1.7",
+    "@fishx/i18n": "0.1.22",
+    "@fishx/logger": "0.1.1",
+    "@fishx/plugins": "4.0.27",
+    "@fishx/rest": "2.0.7",
+    "@fishx/router": "2.0.1-beta3",
+    "@fishx/utils": "0.0.20",
+    "@whalecloud/fdx": "2.0.0-beta.17",
+    "moment": "^2.27.0",
+    "react": "^16.11.0",
+    "react-app-polyfill": "^1.0.6",
+    "react-dom": "^16.11.0",
+    "react-redux": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "@whalecloud/eslint-config": "^0.0.21",
+    "cross-env": "^7.0.2"
+  },
+  "files": [
+    "src/",
+    "build/",
+    "public/",
+    "CI_Config/",
+    ".env",
+    ".gitignore",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc.js",
+    ".prettierignore",
+    ".prettierrc",
+    "build.json",
+    "screenshot.png",
+    "tsconfig.json",
+    "jsconfig.json",
+    "Dockerfile",
+    "fishx.config.ts",
+    "nginx.conf"
+  ],
+  "scaffoldConfig": {
+    "name": "fishx-base-js",
+    "title": "fishx-base-js",
+    "category": "Basic"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.ztesoft.com/fish-x/fishx-desktop-base"
+  },
+  "iceworks": {
+    "type": "react",
+    "adapter": "adapter-fishx-v2"
+  }
+}
