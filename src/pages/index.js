@@ -12,7 +12,7 @@ const Welcome = () => (
             <b className={styles['middle-item-hack']} />
             <div className={styles['middle-item-body']}>
               <h1>{i18n('HELLO_GREETING')}</h1>
-              <h2>FishX-desktop</h2>
+              <h2>FishX-desktop123</h2>
             </div>
           </div>
         </div>
